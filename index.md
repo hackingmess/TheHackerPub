@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+## TheHackerPub 🍻
 
-You can use the [editor on GitHub](https://github.com/hackingmess/TheHackerPub/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+“The Hacker Pub” nace como un espacio para compartir las noticias más importantes del ámbito de ciberseguridad a nivel regional y formar una comunidad de personas interesadas en aprender más sobre la cultura Hacker en general.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+El programa cuenta con dos secciones en la primera se abordan temas de interés de la comunidad (Noticas generales, situacion del pais, certificaciones , entre otras cosas 🤖 y en la segunda se ejecutan laboratorios con fines didácticos mediante diversas plataformas online.
+
+El programa se transmitira en vivo los Jueves de cada mes de 7pm a 9pm de manera bi-semanal y su grabacion sera subida los canales digitales tambien.
+
+H4ck the w0rld! -Hackingmess
+
+Subscribete a nuestras redes sociales para estar pendiende nuestros eventos e informacion valiosa.
+
+Youtube 📹 https://www.youtube.com/channel/UCTVdP3_TRYzlcK2wSjffhRw
+
+IG 📷 https://www.instagram.com/thehackerpub/
+
+Twitch 👾 https://www.twitch.tv/thehackerpub
+
+📧 thehackerpub@gmail.com
+
+Muy pronto
+
+Canal de Telegram 🤖
+
+Canal de discord 🤖
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Youtube 📹 https://www.youtube.com/channel/UCTVdP3_TRYzlcK2wSjffhRw
 
-```markdown
-Syntax highlighted code block
+IG 📷 https://www.instagram.com/thehackerpub/
 
-# Header 1
-## Header 2
-### Header 3
+Twitch 👾 https://www.twitch.tv/thehackerpub
 
-- Bulleted
-- List
+📧 thehackerpub@gmail.com
 
-1. Numbered
-2. List
+Muy pronto
 
-**Bold** and _Italic_ and `Code` text
+Canal de Telegram 🤖
 
-[Link](url) and ![Image](src)
-```
+Canal de discord 🤖
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hackingmess/TheHackerPub/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
