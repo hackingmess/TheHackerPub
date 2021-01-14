@@ -1,29 +1,38 @@
-
-
 Hola,
 
-Aqui encontraras la guia completa de los ejercicios e informacion compartida en el programa. 
+Aqui encontraras la guia completa de los ejercicios e informacion compartida en el programa de hoy 14/01/2021
 
 
+Presentacion
+https://docs.google.com/presentation/d/1wnUeRaT3CxkZzL-gGageSLlmEylviUxo57lU-HeL2S4/edit?usp=sharing 
 
 
 Pagina de retos 
 
 http://labs.gf0s.com/
 
+Asegurate que sea HTTP , no HTTPS ( sino dara problemas del certificado) 
+
+
+Primer reto 
+
+
+Objetivo: Comprometer un servidor FTP 
 
 
 Materiales para el primer reto 
+
 
 1.  Red social del administrador 
   .- Nombre: Alejandro Quero.
   .- Facebook: https://www.facebook.com/profile.php?id=100010301916909
   .- Diagrama de red: https://mega.nz/folder/A1EkiCpB#eMEAcqb7_iibVwY2mTxNDw 
-  
+  .- Direccion IP del servidor: 52.10.103.130 
+  .- Usuario: aquero
+  .- Otro usuario: pedro me
   
   
   Herramientas. utilizar 
-  
   
   Metadata analyzer 
   https://www.metadata2go.com
@@ -36,4 +45,112 @@ Materiales para el primer reto
   
   Hydra source code 
   https://github.com/vanhauser-thc/thc-hydra 
+  
+  Fcrackzip 
+  https://github.com/hyc/fcrackzip 
+  
+  Pasos: 
+  
+  1. Analyzar los archivos y validar los metadatos. 
+  2. Recopilar la informacion en el perfil del admnistrador.
+  3. Generar nuestro diccionario con la utilidad "crunch" , utilizaremos el siguiente comando basado en la informacion dada en el perfil 
+  
+- Para contraseñas que se utilizan para acceder vía red ( telnet, ftp o red de windows) , se utilizan contraseñas de solo dígitos y son solamente de 7 dígitos.
+- Para contraseñas locales ( como documentos .pdf .doc o .zip ), se utilizan contraseñas con unicamente letras minúsculas y números, ademas deberán ser de 6 dígitos.
+
+$  crunch <min> <max> <texto> -o <archivo_de_salida>
+min: mínimo de caracteres
+max: máximo de caracteres
+texto: contiene los caracteres posibles
+archivo_de_salida: nombre del archivo de salida
+
+$  crunch 7 7 0123456789 -o pwd.txt
+$  crunch 7 7 1980 -o pwd.txt
+
+
+4. Ejecutar el ataque de fuerza bruta con Hydra. 
+
+$  hydra -l aquero -P pwd.txt ftp://52.10.103.130 
+-l: usuario para acceder al servidor ftp
+-P: archivo que contiene el diccionario
+ 
+5. Procedemos a loguearnos al servidor FTP , usando el comando ftp 52.10.103.130
+
+6. Procedemos subir nuestra "evidencia" en forma de archivo con el comando send <file-name> <file-name> 
+
+7. Una vez dentro del servidor FTP notamos que hay una carpeta llamada "privado", ingresamos y procedemos a descargar el archivo " PrototipoPrivado6.zip " 
+
+8. Vemos que esta protegido por contraseña, para esta tarea utilizaremos una herramienta instalada por defecto llamada fcrackzip  y corremos el siguiente comando 
+
+ $  fcrackzip -b -c a1 -l 6-6 -v -u PrototipoPrivado6.zip
+
+-b: utiliza el algoritmo para fuerza bruta
+-c: indicamos caracteres alfanuméricos (a1)
+-l: longitud mínima - longitud máxima (6-6)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Segundo Reto 
+
+Objetivos
+
+- Acceder a una página privada.
+- Descifrar el contenido del archivo secreto.
+
+ 
+Materiales para el segundo reto 
+ 
+ 
+ Wireshark 
+ 
+ https://www.wireshark.org/ 
+ 
+ Crackstation 
+ https://crackstation.net/ 
+ 
+ 
+ Parte 1 
+ 
+ 
+ 1. Descargar el archivo con los datos ( captura_de_red_reto2.pcap)
+ 2. Procedemos a abrir el archivo con wireshark 
+ 3. Pista puedes filtrar el trafico del puerto 80 con el comando tcp.port == 80, ahi encontraras los credenciales :) 
+ 
+Parte 2 
+
+1. Una vez en el servidor , veremos el archivo pwdump.txt , si lo abriremos encontraremos una informacion que nos resulta familiaar }:) 
+2. El reto en este punto se puede resolver de diferentes maneras, a mi preferencia use la pagina crackstation para terminar el reto 
+
+
+Reto 3 
+
+Objetivo 
+
+Resolver 5 acertijos diferentes para localizar al terrorista TOCHAMA 
+
+Materiales para el tercer reto 
+ 
+ QR Online decoder 
+ https://zxing.org/w/decode.jspx 
+ 
+ Exif data viewer 
+ http://exif-viewer.com/ 
+ 
+ Online javascript beautiful 
+ https://beautifier.io/ 
+ 
+ Pasos 
+ 
+ 1. La primera pista nos llevara hacia un QR Code que procedemos a escanear , en mi caso recomiendo usar un lector online, para mi caso utilice 
+ https://zxing.org/w/decode.jspx 
+ 
+ 2. La segunda pista nos mostrara un boleto para analizar, es importate revisar los metadatos para este caso utilize 
+ http://exif-viewer.com/ 
+ 
+ 3. Nos pide entrar a una area secreta, yo revisaria el codigo de la pagina ]:) 
+ 
+ 4. En la cuarta pista volvemos a ver un archivo .pcap, fijate que le podemos sacar con wireshark. 
+ 
+ 5. La quinta pista te la dejo a ti, ya a este punto debes ser todo una Hacker }:)
   
