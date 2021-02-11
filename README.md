@@ -17,12 +17,8 @@ IG 📷 https://www.instagram.com/thehackerpub/
 
 
 Twitch 👾 https://www.twitch.tv/thehackerpub
-
+Discord 🕹 https://lnkd.in/e-_vFne 
 
 📧 thehackerpub@gmail.com
 
-Muy pronto
 
-Canal de Telegram 🤖
-
-Canal de discord 🤖
